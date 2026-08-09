@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  overflow: hidden;
+  color: #333;
+  background: #f5f6fa;
+}
+
+.sidebar {
+  width: 240px;
+  flex: 0 0 240px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 0 18px rgba(0, 0, 0, 0.08);
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex: 0 0 auto;
+}
+
+.menu-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #363636;
+  letter-spacing: 0.5px;
+}
+
+.menu-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.menu-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.menu-body::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 2px;
+}
+
+.list-col {
+  margin-bottom: 20px;
+}
+
+.group-title {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #eee;
+  letter-spacing: 1px;
+}
+
+.btn-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btn {
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1.2px solid #3273dc;
+  border-radius: 5px;
+  color: #3273dc;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background: #3273dc;
+  color: #fff;
+}
+
+.btn.active {
+  background: #3273dc;
+  color: #fff;
+}
+
+#live2d-widget-container {
+  flex: 1;
+  height: 100vh;
+}
+
+#live2d-widget-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

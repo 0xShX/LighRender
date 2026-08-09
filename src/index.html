@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LighRender</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app" class="sidebar">
+    <div class="menu-bar">
+      <span class="menu-title">LighRender</span>
+    </div>
+    <div class="menu-body">
+      <div id="menu-container" class="wrap"></div>
+    </div>
+  </div>
+
+  <div id="live2d-widget-container">
+    <canvas id="live2d-widget-canvas"></canvas>
+  </div>
+
+  <script src="../lib/live2d.min.js"></script>
+  <script src="../lib/live2dcubismcore.min.js"></script>
+  <script src="../lib/pixi.min.js"></script>
+  <script src="../lib/pixi-live2d-display.min.js"></script>
+
+  <script src="engine.js"></script>
+  <script src="widget.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
