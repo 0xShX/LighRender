@@ -93,15 +93,14 @@ class Live2DRenderEngine {
       model.internalModel?.focusController;
 
     if (focusCtrl) {
-      const hw = this.canvas.width / 2;
-      const hh = this.canvas.height / 2;
-
       const pointerMove = e => {
         const p = e.touches?.[0] || e;
         if (p.clientX == null) return;
-
         const r = this.canvas.getBoundingClientRect();
-        const px = Math.max(-1, Math.min(1, (p.clientX - r.left - hw) / hw));
+        const hw = this.canvas.clientWidth / 2;
+        const hh = this.canvas.clientHeight / 2;
+        const pxRaw = (p.clientX - r.left - hw) / hw;
+        const px = Math.max(-1, Math.min(1, pxRaw));
         const py = Math.max(-1, Math.min(1, -(p.clientY - r.top - hh) / hh));
         focusCtrl.focus(px, py);
       };
